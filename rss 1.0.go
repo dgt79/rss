@@ -67,7 +67,7 @@ func parseRSS1(data []byte, read *db) (*Feed, error) {
 		
 		// Skip items already known.
 		if read.req <- item.ID; <- read.res {
-			continue
+			//continue
 		}
 		
 		next := new(Item)
